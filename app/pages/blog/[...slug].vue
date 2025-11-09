@@ -55,7 +55,10 @@ const formatDate = (dateString: string) => {
   <UMain class="mt-20 px-2">
     <UContainer class="relative min-h-screen">
       <UPage v-if="page">
-        <ULink to="/blog" class="text-sm flex items-center gap-1">
+        <ULink
+          to="/blog"
+          class="text-sm flex items-center gap-1"
+        >
           <UIcon name="lucide:chevron-left" />
           Blog
         </ULink>
@@ -71,7 +74,11 @@ const formatDate = (dateString: string) => {
               {{ page.minRead }} MIN READ
             </span>
           </div>
-          <img :src="page.image" :alt="page.title" class="rounded-lg w-full h-[300px] object-cover object-center" />
+          <img
+            :src="page.image"
+            :alt="page.title"
+            class="rounded-lg w-full h-[300px] object-cover object-center"
+          >
           <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
@@ -79,16 +86,29 @@ const formatDate = (dateString: string) => {
             {{ page.description }}
           </p>
           <div class="flex items-center justify-center gap-2 mt-2">
-            <UUser orientation="vertical" color="neutral" variant="outline"
-              class="justify-center items-center text-center" v-bind="page.author" />
+            <UUser
+              orientation="vertical"
+              color="neutral"
+              variant="outline"
+              class="justify-center items-center text-center"
+              v-bind="page.author"
+            />
           </div>
         </div>
         <UPageBody class="max-w-3xl mx-auto">
-          <ContentRenderer v-if="page.body" :value="page" />
+          <ContentRenderer
+            v-if="page.body"
+            :value="page"
+          />
 
           <div class="flex items-center justify-end gap-2 text-sm text-muted">
-            <UButton size="sm" variant="link" color="neutral" label="Copy link"
-              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')" />
+            <UButton
+              size="sm"
+              variant="link"
+              color="neutral"
+              label="Copy link"
+              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
+            />
           </div>
           <UContentSurround :surround />
         </UPageBody>
