@@ -8,3 +8,5 @@ author:
 # Test Blog Post page
 
 ekhane ami likhbo kivabe blog likhte hoy :-D
+
+![naribad photo.jpg](/naribad%20photo.jpg)
